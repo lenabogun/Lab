@@ -1,0 +1,32 @@
+
+public class Main{
+    public void main(){
+        int a,b,c,k,l;
+        System.out.println("Введите К и L");
+        System.in.readln(k,l);
+        Vector vk = new Vector();
+        Vector vl = new Vector();
+        for(int i = 0;i<k;i++) {
+            System.in.readln(a,b,c);
+            vk.add(new Triangl(a,b,c));
+        }
+        for(int i = 0;i<k;i++) {
+            System.in.readln(a,b,c);
+            vl.add(new Triangl(a,b,c));
+        }
+        float p=0;
+        for(Triangle T:vk){
+            p += T.getP();
+        }
+        p /= k;
+        System.out.println(p);
+        float max=0;
+        for (Triangle T:vl) {
+            float S = T.getS();
+            if(max<S){
+                max=S;
+            }
+        }
+        System.out.println(S);
+    }
+}

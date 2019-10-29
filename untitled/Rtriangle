@@ -1,0 +1,6 @@
+public class Rtriangle extends Triangl{
+    public float Proverka(){
+        if ((a==b)&&(a==c)) return true;
+        return false;
+    }
+}
